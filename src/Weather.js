@@ -78,10 +78,10 @@ export default function Weather() {
         <div className="bg-black w-[400px] text-white mx-auto border-4 border-black rounded-3xl">
           <div className="bg-blue-500 border-4 border-black rounded-3xl">
             <div className="bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 border-2 border-gray-200 rounded-2xl">
-              <div className="flex text-center  py-4 mx-auto font-bold text-xl">
+              <div className="flex justify-center py-4 mx-auto font-bold text-xl">
                 {/* Weather 
               <div></div><div></div> */}
-                <img src={locicon} className="w-7 ml-14" alt="" />
+                <img src={locicon} className="w-7" alt="" />
                 {area}
               </div>
               <div className="block pb-4 pl-[6.5rem] font-bold text-2xl">
