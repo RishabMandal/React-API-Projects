@@ -6,6 +6,7 @@ export default function Pokemon() {
   const [num, setNum] = useState("1");
   const [pokemonname, setPokemonName] = useState();
   const [pokemonweight, setPokemonweight] = useState();
+  const [pokemonimage, setPokemonimage] = useState();
   let number = num;
 
   useEffect(() => {
@@ -16,6 +17,7 @@ export default function Pokemon() {
 
       setPokemonName(res.data.name);
       setPokemonweight(res.data.weight / 10); // Dividing weight by 10
+      setPokemonimage(res.data.sprites.front_default);
     }
 
     getData();
@@ -24,6 +26,10 @@ export default function Pokemon() {
   return (
     <>
       <div className="my-14 text-4xl font-bold text-center">PokeTab</div>
+      <div>
+        <img src={pokemonimage} alt="" />
+        {/* <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="" /> */}
+      </div>
       {/* <div>{pokemon}</div> */}
       <div className="m-4 text-2xl text-center">
         Enter a number between 1 to 850
@@ -41,7 +47,7 @@ export default function Pokemon() {
       <div className="text-4xl text-center">
         Pokemon weight : {pokemonweight}kg
       </div>
-      <div className="flex justify-center" >
+      <div className="flex justify-center">
         <button
           onClick={() => {
             // New syntax
